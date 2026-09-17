@@ -404,11 +404,7 @@ class RealTimeCandAlarm:
         return main_ts
 
     def combine_image_to_list(self,):
-        fnames = [
-            "filtb_DMcand.png", "normal_image.png", 
-            "filtb_DM0.png", "double_image.png",
-            "ics.png", "pcb.png", 
-        ]
+        fnames = ["ics.png", "pcb.png", "filtb_DM0.png", "filtb_DMcand.png", "normal_image.png", "double_image.png"]
         files = [f"{self.workdir}/{fname}" for fname in fnames if os.path.exists(f"{self.workdir}/{fname}")]
         title = [fname for fname in fnames if os.path.exists(f"{self.workdir}/{fname}")]
         return files, title
